@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Generated PDF</title>
+</head>
+<body>
+    <div style="margin: 0 auto;display: block;width: 500px;">
+        <table width="100%" border="1">
+    
+            <tr>
+                <td>Name:</td>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>{{description}}</td>
+            </tr>
+            <tr>
+                <td>Images:</td>
+                <td>
+                <ul>
+                    {% for imgSrc in images %}
+                        <li>
+                       
+                            <img src = "{{ imgSrc }}" style="width:200px;"/>
+                        </li>
+                    {% endfor %}
+                </ul>
+               
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}User{% endblock %}
+ 
+{% block body %}
+    <div class="container">
+        <h2 class="text-center mt-5 mb-3">Show User</h2>
+        <div class="card">
+            <div class="card-header">
+                <a class="btn btn-outline-info float-right" href="{{ path('app_user_index') }}"> 
+                    View All Users
+                </a>
+            </div>
+            <div class="card-body">
+                <b class="text-muted">Name:</b>
+                <p>{{ user_info.name }}</p>
+                <b class="text-muted">Description:</b>
+                <p>{{ user_info.description }}</p>
+                <b class="text-muted">Date Created:</b>
+                <p>{{ user_info.createdAt ? user_info.createdAt|date('Y-m-d H:i:s') : '' }}</p>
+                <b class="text-muted">Date Updated:</b>
+                <p>{{ user_info.updatedAt ? user_info.updatedAt|date('Y-m-d H:i:s') : '' }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
